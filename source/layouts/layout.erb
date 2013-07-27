@@ -3,16 +3,20 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
-    
+
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= data.page.title || "The Middleman" %></title>
-    
+
     <%= stylesheet_link_tag "normalize", "app", "style" %>
     <%= javascript_include_tag "vendor/custom.modernizr" %>
+
+    <script type="text/javascript" src="//use.typekit.net/tpe0bph.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
   </head>
-  
+
   <body class="<%= page_classes %>">
     <%= yield %>
 

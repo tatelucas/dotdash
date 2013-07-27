@@ -15,3 +15,11 @@
 //= require foundation/foundation.topbar
 
 //= require script
+
+$(function() {
+  $('.scrollTo, .nav-bar a').on('click', function(e) {
+      e.preventDefault();
+      var $target = $(this.hash), target = this.hash;
+      Foundation.lib_methods.scrollTo($(window), $($(e.currentTarget).attr('href')).offset().top, 200);
+  });
+});

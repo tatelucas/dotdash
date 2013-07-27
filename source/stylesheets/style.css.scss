@@ -1,0 +1,166 @@
+@import "app";
+
+body {
+  background: #f6f6f6;
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: "proxima-nova-sc-osf",sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+h2 {
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.page-title {
+  text-align: center;
+}
+
+#header {
+  background: url('/img/headerbg.png') center center no-repeat fixed;
+  background-size: cover;
+  @include clearfix();
+  color: #fff;
+  min-height: 500px;
+
+  #logo {
+    padding: 0;
+    margin: 75px auto;
+    text-align: center;
+
+    a {
+      margin: 0 auto;
+      background: transparent;
+      display: block;
+      text-indent: -9999px;
+      width: 385px;
+      height: 385px;
+      @include image-2x('/img/logo.png', 385px, 385px);
+    }
+  }
+}
+
+#stickycont{
+  //background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAX/GZH4/4FsRpgAmAOSBBFwDkgAAIKuBATRTAAZAAAAAElFTkSuQmCC) repeat;
+  //background: transparent url('/img/lines.png') repeat;
+  //background-color: rgba(00, 00, 00, .3);
+  background-color: transparent;
+  background-image: $crosshatch;
+
+  .top-bar {
+    background-color: transparent;
+
+
+    .top-bar-section {
+      background: transparent;
+
+      .nav-bar {
+        background: transparent;
+
+        a {
+          background: transparent;
+          color: #000;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.content-section {
+  padding: 60px 0;
+}
+
+#tagline {
+  background: #eee;
+
+  .devices {
+    margin-top: 100px;
+  }
+}
+
+.dotdash {
+  width: 170px;
+  margin: -25px auto 25px;
+
+  &:before {
+    content: "";
+    display: block;
+    @include border-radius(50%);
+    background: $crosshatch;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 15px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    background: $crosshatch;
+    height: 50px;
+    width: 100px;
+    float: left;
+  }
+}
+
+.portfolio-row {
+  overflow: hidden;
+  width: 150%;
+
+  .portfolio-block {
+    padding-right: 20px;
+    padding-bottom: 20px;
+    width: 385px;
+    float: left;
+
+    &:last-child {
+    }
+
+    .portfolio-item {
+      background: $crosshatch;
+      padding: 15px 15px 1px;
+
+      .content {
+        background: white;
+        min-height: 300px;
+        padding: 5px 15px 0;
+      }
+    }
+  }
+
+  &.even-row {
+    left: -2%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &.odd-row {
+    left: -15.5%;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+#about {
+  background: url(/img/library.png) center center no-repeat fixed;
+
+  h2, p {
+    color: #fff;
+  }
+}
