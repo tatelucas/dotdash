@@ -2,37 +2,38 @@
 
 body {
   background: #f6f6f6;
-  font-family: "proxima-nova",sans-serif;
+  font-family: "adelle-sans",sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 h1,h2,h3,h4,h5 {
-  font-family: "proxima-nova-sc-osf",sans-serif;
+  font-family: "adelle-sans",sans-serif;
   font-style: normal;
-  font-weight: 300;
-  text-transform: lowercase;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-family: "proxima-nova",sans-serif;
+  font-family: "adelle-sans",sans-serif;
   font-style: normal;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 p {
-  font-family: "proxima-nova",sans-serif;
+  font-family: "adelle-sans",sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
 .page-title {
   text-align: center;
+  clear: both;
 }
 
 #header {
-  background: url('/img/headerbg.png') center center no-repeat fixed;
+  background: url('/img/headerbg.jpg') center center no-repeat fixed;
   background-size: cover;
   @include clearfix();
   color: #fff;
@@ -65,7 +66,6 @@ p {
   .top-bar {
     background-color: transparent;
 
-
     .top-bar-section {
       background: transparent;
 
@@ -80,6 +80,21 @@ p {
       }
     }
   }
+
+  &.fixed {
+    background: $crosshatch-reverse;
+    
+    .top-bar {
+      .top-bar-section {
+        .nav-bar {
+          a {
+            color: white;
+            @include text-shadow(rgba(black, 1) 1px 1px 0);
+          }
+        }
+      }
+    }
+  }
 }
 
 .content-section {
@@ -89,6 +104,10 @@ p {
 #tagline {
   background: #eee;
 
+  p {
+    margin-bottom: .9em;
+  }
+
   .devices {
     margin-top: 100px;
   }
@@ -97,6 +116,8 @@ p {
 .dotdash {
   width: 170px;
   margin: -25px auto 25px;
+  position: relative;
+  z-index: 99;  
 
   &:before {
     content: "";
@@ -119,41 +140,85 @@ p {
   }
 }
 
-.portfolio-row {
-  overflow: hidden;
-  width: 150%;
+#work.content-section {
+  background: $crosshatch-reverse;
+  background-color: #444;
+  padding: 0px; 
+  margin-top: -25px;
 
-  .portfolio-block {
-    padding-right: 20px;
-    padding-bottom: 20px;
-    width: 385px;
-    float: left;
+  .page-title {
+    margin-bottom: 40px;
+  }
 
-    &:last-child {
+  h2 {
+    color: #fff;
+  }
+
+  .portfolio-row {
+    @include clearfix;
+    clear: both;
+
+    &.first-row {
+      margin-top: -25px;
     }
 
-    .portfolio-item {
-      background: $crosshatch;
-      padding: 15px 15px 1px;
+    .portfolio-block {
+      width: 25%;
+      float: left;
+      cursor: pointer;
 
-      .content {
-        background: white;
-        min-height: 300px;
-        padding: 5px 15px 0;
+      .portfolio-item {
+        padding: 0px;
+        text-align: center;
+
+        &.noble {
+          background: url(/img/portfolio/noble.png) top center no-repeat;
+        }
+
+        &.earwolf {
+          background: url(/img/portfolio/earwolf.png) top center no-repeat;
+        }
+
+        &.ideatraction {
+          background: url(/img/portfolio/ideatraction.png) top center no-repeat;
+        }
+
+        .content {
+          min-height: 300px;
+          background: rgba(00, 00, 00, 0.7);
+          @include transition(all .15s ease-in);
+          position: relative;
+          margin: 0;  
+          padding: 0; 
+
+          &:hover {
+            background: transparent;
+
+            h3 {
+              @include opacity(1);
+            }
+          }
+        
+          h3 {
+            margin: 0 auto;
+            width: 100%;
+            min-height: 300px;
+            line-height: 300px;
+            @include opacity(0.1);
+            font-size: 1.2em;
+
+            span {
+              color: white;
+              background: black;
+              padding: 20px;
+              border: 3px solid white;
+              outline: 8px solid black;
+            }
+          }
+
+        }
       }
     }
-  }
-
-  &.even-row {
-    left: -2%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  &.odd-row {
-    left: -15.5%;
-    position: relative;
-    overflow: hidden;
   }
 }
 

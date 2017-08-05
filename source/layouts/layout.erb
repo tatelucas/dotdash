@@ -11,23 +11,20 @@
 
     <%= stylesheet_link_tag "normalize", "app", "style" %>
     <%= javascript_include_tag "vendor/custom.modernizr" %>
-
-    <script type="text/javascript" src="//use.typekit.net/tpe0bph.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
   </head>
 
   <body class="<%= page_classes %>">
     <%= yield %>
 
+  <script type="text/javascript" src="//use.typekit.net/zaw8zix.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  
   <script>
     document.write('<script src=' +
     ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
     '.js><\/script>')
   </script>
-
   <%= javascript_include_tag  "all" %>
-
   <script>
     $(document).foundation();
   </script>

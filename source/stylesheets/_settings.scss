@@ -11,7 +11,19 @@
 // Foundation Global Variables
 //
 
+// Custom Stuff
 $crosshatch: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGklEQVQIW2NkYGAwBuKzQMzACCJgAjAOWAAAL0ACN8CY3sAAAAAASUVORK5CYII=);
+$crosshatch-reverse: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAEUlEQVQIW2NkgID/jCACiBkBDx8CAhQOwfMAAAAASUVORK5CYII=);
+
+@function set-button-text-color($color) {
+  @if (lightness( $color ) > 40) {
+    @return black;
+  }
+  @else {
+    @return white;
+  } 
+}
+
 
 // This is the default html and body font-size for the base em value.
 // $em-base: 16px;
