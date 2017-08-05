@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'circular';
+  src: url('/static/fonts/circular.eot'); /* IE9 Compat Modes */
+  src: url('/static/fonts/circular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/static/fonts/circular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/static/fonts/circular.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/static/fonts/circular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/static/fonts/circular.svg#circular') format('svg'); /* Legacy iOS */
+}
+
+.hidden {
+  display: none;
+}
+
+a, div {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  margin: 0;
+  font-family: 'circular', Georgia, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  .container {
+    background: #FBFBFB;
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    box-sizing: border-box;
+    position: relative;
+    animation: 1s ease-in-out zoomIn;
+    animation-fill-mode: both;
+
+    @keyframes zoomIn {
+      0% {
+        border: 0px;
+      }
+      100% {
+        border: 20px solid #FBFBFB;
+      }
+    }
+
+    .inner-container {
+      background: linear-gradient(44deg, #0d1728, #1a2637, #dc1d2c);
+      background-size: 600% 600%;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      animation: AnimationName 30s ease infinite;
+      box-shadow: 0 0 30px rgba(136,136,136,.6);
+      padding: 20px;
+      min-height: 190px;
+
+      @keyframes AnimationName {
+          0%{background-position:0% 91%}
+          50%{background-position:100% 10%}
+          100%{background-position:0% 91%}
+      }
+    }
+  }
+
+  .logo {
+    // max-width: 60%;
+    width: 130px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    animation: 2s ease-in-out fadeIn;
+    animation-fill-mode: both;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
+    width: 200px;
+    // right: 20px;
+    // text-align: right;
+    animation: 3s ease-in-out fadeIn;
+    animation-fill-mode: both;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    img {
+      max-width: 50px;
+      height: auto;
+    }
+  }
+}
