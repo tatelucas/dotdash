@@ -19,7 +19,7 @@ const TemplateWrapper = ({
     <div className="inner-container">
       <Helmet>
        <title>Dot Dash | Web & Mobile Development, Design & Branding in Cincinnati</title>
-       <link href="/static/favicon.ico" rel="icon" type="image/x-icon" />
+       <link href="/static/favicon.png" rel="icon" type="image/x-icon" />
        <meta name="description" content="Web & Mobile Development, Design & Branding in Cincinnati" />
       </Helmet>
       <Header />
