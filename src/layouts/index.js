@@ -17,13 +17,11 @@ const TemplateWrapper = ({
 }) => (
   <div className="container">
     <div className="inner-container">
-      <Helmet
-        title="Dot Dash | Web & Mobile Development, Design & Branding in Cincinnati"
-        meta={[
-          { name: 'description', content: 'Web & Mobile Development, Design & Branding in Cincinnati' },
-          { name: 'keywords', content: 'web development, web design, mobile development, cincinnati, ohio, over the rhine' },
-        ]}
-      />
+      <Helmet>
+       <title>Dot Dash | Web & Mobile Development, Design & Branding in Cincinnati</title>
+       <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+       <meta name="description" content="Web & Mobile Development, Design & Branding in Cincinnati" />
+      </Helmet>
       <Header />
       <div>
         {children()}
